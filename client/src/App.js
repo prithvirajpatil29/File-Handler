@@ -14,6 +14,7 @@ import { AuthContext } from './Context/AuthContext';
 import View from './components/screens/View';
 import FileUpload from './components/user/FileUpload';
 import GeneratePassword from './components/auth/GeneratePassword';
+import ResetPassword from './components/auth/ResetPassword';
 function App() {
   const context = useContext(AuthContext)
   const isLogin = context.isLogin
@@ -29,6 +30,7 @@ function App() {
             <Route path='/upload/new' element={<FileUpload></FileUpload>}></Route>
             <Route path='view/file/:id' element={<View></View>}></Route>
           </Route>
+          <Route path='/password/reset' element={isLogin? <Navigate to='/'></Navigate> : <ResetPassword></ResetPassword>}></Route>
           <Route path='/generate/password' element={isLogin? <Navigate to='/'></Navigate> : <GeneratePassword></GeneratePassword>}></Route>
         <Route path='/login' element={isLogin? <Navigate to={'/'}></Navigate>:<Login></Login>}></Route>
         <Route path='/register' element={isLogin? <Navigate to={'/'}></Navigate>:<Register></Register>}></Route>
