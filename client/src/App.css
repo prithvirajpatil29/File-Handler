@@ -1,0 +1,13 @@
+.login{
+   height: 100vh;
+  /*display: flex;
+  align-items: center;
+  justify-content: center; */
+}
+.login form{
+  /* display: flex; */
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+}
